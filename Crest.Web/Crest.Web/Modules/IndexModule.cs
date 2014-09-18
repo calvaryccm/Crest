@@ -1,4 +1,9 @@
-﻿using Nancy;
+﻿using Crest.Web.Models;
+using Nancy;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
+using Dapper;
 
 namespace Crest.Web.Modules
 {
@@ -8,7 +13,14 @@ namespace Crest.Web.Modules
         {
             Get["/"] = parameters =>
             {
-                return View["index"];
+                IEnumerable<Error> result = null;
+
+                using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["CrestDB"].ConnectionString))
+                {
+                    result = connection.GetList<Error>("SELECT TOP 20 * FROM Errors");
+                }
+
+                return View["index", result];
             };
         }
     }
