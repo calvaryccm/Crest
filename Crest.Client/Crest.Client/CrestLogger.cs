@@ -20,9 +20,15 @@ namespace Crest.Client
             hubConnection.Start().Wait();
         }
 
-        public void LogError(Exception e)
+        public void LogError(Exception e) 
         {
+            int thins = 9;
             errorLogHubProxy.Invoke("LogError", e);
+        }
+
+        public void LogWebError(Exception e, HttpClientException f)
+        {
+            errorLogHubProxy.Invoke("LogWebError", e);
         }
     }
 }

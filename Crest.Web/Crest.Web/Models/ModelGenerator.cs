@@ -41,7 +41,7 @@ namespace Crest.Web.Models
 		public virtual string User { get; set; }
 		public virtual int StatusCode { get; set; }
 		public virtual DateTime TimeUtc { get; set; }
-		public virtual string AllXml { get; set; }
+		public virtual string JsonInfo { get; set; }
 	}
 
 }
