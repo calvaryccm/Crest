@@ -17,7 +17,7 @@ namespace Crest.Web.Modules
 
                 using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["CrestDB"].ConnectionString))
                 {
-                    result = connection.GetList<Error>("SELECT TOP 20 * FROM Errors");
+                    result = connection.Query<Error>("SELECT TOP 20 * FROM Errors");
                 }
 
                 return View["index", result];
