@@ -15,9 +15,9 @@ namespace Crest.Web
 
         protected override void ApplicationStartup(TinyIoCContainer container, IPipelines pipelines)
         {
-            base.ApplicationStartup(container, pipelines);
-            this.Conventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("Scripts"));
-            CookieBasedSessions.Enable(pipelines);
+            //base.ApplicationStartup(container, pipelines);
+            //this.Conventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("Scripts"));
+            //CookieBasedSessions.Enable(pipelines);
             //RouteTable.Routes.MapHubs();
         }
     }

@@ -1,49 +1,151 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title>CREST - Centralized Error System Tool</title>
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+@{
+    Layout = "Views/Shared/_Layout.cshtml";
+}
 
-    <!-- Stylesheets -->
-    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
-</head>
-<body>
-
-    <div class="container">
-        <div class="well span10 text-center">
-            <h2 class="muted">This is a Test</h2>
-        </div>
-
-        <div class="well span10">
-            <div class="row">
-                <div class="span10">
-                    <h4><i class="icon-pencil"></i>&nbsp;Your Message</h4>
-                    <textarea class="field span10" id="message" rows="3" placeholder="Enter a short chat message"></textarea>
-                </div>
-            </div>
-            <div class="row">
-                <div class="span10 offset8">
-                    <input type="button" class="btn btn-primary span2" id="sendmessage" value="Broadcast" />
-                </div>
-            </div>
-
-        </div>
-        <div class="well span10">
-            <div class="row">
-                <div class="span10">
-                    <input type="hidden" id="displayname" />
-                    <h4><i class="icon-bullhorn"></i>&nbsp;Discussion</h4>
-                    <div id="discussion"></div>
-                </div>
-            </div>
-        </div>
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            Dashboard
+            <small>What's Happening</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li class="active">
+                <i class="fa fa-dashboard"></i> Dashboard
+            </li>
+        </ol>
+        <p class="lead">Filters go here</p>
+        <table class="table forum table-striped">
+            <thead>
+                <tr>
+                    <th class="cell-stat"></th>
+                    <th>
+                        <h3>Error</h3>
+                    </th>
+                    <th class="cell-stat hidden-xs hidden-sm">OS/Browser</th>
+                    <th class="cell-stat text-center hidden-xs hidden-sm">HTTP Host</th>
+                    <th class="cell-stat text-center hidden-xs hidden-sm">User/IP</th>
+                    <th class="cell-stat-2x hidden-xs hidden-sm">Date/Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center"><i class="fa fa-desktop fa-2x text-primary"></i></td>
+                    <td>
+                        <h4>
+                            <a href="#">CCM-WWW</a><br>
+                            <small>Lorem lean startup ipsum product market fit customer development acquihire technical cofounder.</small>
+                        </h4>
+                    </td>
+                    <td class="hidden-xs hidden-sm">
+                        <i class="fa fa-windows"></i><a href="#"> Windows 8.1</a><br>
+                        <i class="fa fa-windows"></i><a href="#"> Google Chrome</a>
+                    </td>
+                    <td class="text-center hidden-xs hidden-sm">
+                        <a href="#">calvaryccm.com</a>
+                    </td>
+                    <td class="text-center hidden-xs hidden-sm">
+                        <i class="fa fa-user"></i> courtneyk
+                        <small>10.20.0.213</small>
+                    </td>
+                    <td class="hidden-xs hidden-sm">
+                        <i class="fa fa-user"></i><a href="#">courtneyk</a><br>
+                        <small><i class="fa fa-clock-o"></i> 3 months ago</small>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+</div>
 
-    <!-- JavaScript -->
-    <script src="~/Scripts/jquery-2.1.1.js"></script>
-    <script src="~/Scripts/jquery.signalR-2.1.2.js"></script>
-    <script src="../Scripts/bootstrap.min.js"></script>
-    <script src="../signalr/hubs" type="text/javascript"></script>
-    <script src="../scripts/chat.min.js" type="text/javascript"></script>
-</body>
-</html>
+<!-- Page Heading -->
+@*<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            Dashboard
+            <small>What's Happening</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li class="active">
+                <i class="fa fa-dashboard"></i> Dashboard
+            </li>
+        </ol>
+
+        <div class="row">
+            <div class="col-lg-3">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Search</label>
+                        <div class="col-sm-10">
+                            <input placeholder="Search" id="box" type="text" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-3">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Search</label>
+                        <div class="col-sm-10">
+                            <input placeholder="Search" id="box" type="text" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-3">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Search</label>
+                        <div class="col-sm-10">
+                            <input placeholder="Search" id="box" type="text" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+            <ul class="error-list">
+                <li>
+                    <span class="device" style="display:table">
+                        <span class="type bg-primary">Desktop</span>
+                    </span>
+                    <div class="info">
+                        <h2 class="title">CCM-InfoKiosk</h2>
+                        <p class="desc">Lorem lean startup ipsum product market fit customer development acquihire technical cofounder. User engagement A/B testing shrink a market venture capital pitch deck. Social bookmarking group buying crowded market pivot onboarding freemium prototype ping pong. Early stage disruptive ecosystem community outreach dynamic location based strategic investor.</p>
+                        <ul>
+                            <li style="width:33%;"><a href="#website"><span class="fa fa-user"></span> SYSTEM</a></li>
+                            <li style="width:33%;"><span class="fa fa-calendar"></span> 24 September 2014</li>
+                            <li style="width:33%;"><span class="fa fa-clock-o"></span> 7:59 PM</li>
+                        </ul>
+                    </div>
+                    <div class="social">
+                        <ul>
+                            <li class="facebook" style="width:33%;"><a href="#"><span class="fa fa-windows"></span></a></li>
+                            <li class="google-plus" style="width:33%;"><a href="#"><span class="fa fa-desktop"></span></a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <span class="device" style="display:table">
+                        <span class="type bg-success">Web</span>
+                    </span>
+                    <div class="info">
+                        <h2 class="title">CCM-WWW</h2>
+                        <p class="desc">Lorem lean startup ipsum product market fit customer development acquihire technical cofounder. User engagement A/B testing shrink a market venture capital pitch deck. Social bookmarking group buying crowded market pivot onboarding freemium prototype ping pong. Early stage disruptive ecosystem community outreach dynamic location based strategic investor.</p>
+                        <ul>
+                            <li style="width:33%;"><a href="#website"><span class="fa fa-user"></span> testuser</a></li>
+                            <li style="width:33%;"><span class="fa fa-calendar"></span> 24 September 2014</li>
+                            <li style="width:33%;"><span class="fa fa-clock-o"></span> 11:37 PM</li>
+                        </ul>
+                    </div>
+                    <div class="social">
+                        <ul>
+                            <li class="facebook" style="width:33%;"><a href="#"><span class="fa fa-apple"></span></a></li>
+                            <li class="google-plus" style="width:33%;"><a href="#"><span class="fa fa-desktop"></span></a></li>
+                            <li class="google-plus" style="width:33%;"><a href="#"><span class="fa fa-desktop"></span></a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>*@

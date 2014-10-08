@@ -1,0 +1,556 @@
+﻿/* Global Overrides */
+
+body {
+    margin-top: 100px;
+    background-color: #222;
+}
+
+
+.navbar {
+    min-height: 70px;
+}
+
+.navbar-brand {
+    height: 70px;
+}
+
+.navbar-inverse {
+    background-color: #222;
+    border-color: transparent;
+}
+
+.btn {
+    color: #ffffff;
+    -webkit-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-image: none;
+    border-radius: 0;
+    border: none;
+}
+
+    .btn:hover, .btn:focus {
+        color: #FFF;
+        -webkit-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    }
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    width: 172px;
+    height: 43px;
+}
+
+    .btn-file input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 999px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: white;
+        cursor: inherit;
+        display: block;
+    }
+
+h3, .h3 {
+    font-size: 20px;
+}
+
+/* Form Overrides */
+input[type="checkbox"] {
+    margin-right: 5px;
+    margin-top: 1px \9;
+    line-height: normal;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    height: 100%;
+    width: 100%;
+    padding: 8px;
+}
+
+select, textarea, input[type="text"], input[type="password"], input[type="date.device"], input[type="date.device-local"], input[type="date"], input[type="month"], input[type=".device"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    border-radius: 0;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.form-control{
+    border-radius:0;
+}
+
+
+.panel {
+    border-radius: 0;
+}
+
+.alert {
+    border-radius: 0;
+}
+
+    .alert h3 {
+        margin-bottom: 5px;
+        margin-top: 0;
+    }
+
+.searchable-container {
+    margin-top: 15px;
+}
+
+    .searchable-container h4 {
+        margin-top: 0;
+    }
+
+.well-sm {
+    padding: 9px;
+    width: 40%;
+    border: 1px solid #C0C0C0;
+    background-color: #FFFFFF;
+}
+
+/*Change text hightlight color*/
+::-moz-selection {
+    background: #f2c2c9;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #a0d071;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.table-list-search h3 {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+/* Campus Colors */
+.melbourneCampus {
+    color: #02abc8;
+}
+
+.vieraCampus {
+    color: rgb(103, 143, 52);
+}
+
+/* Search */
+#input-search {
+    font-size: 26px;
+    border-radius: 0;
+    height: auto;
+}
+
+/*List group*/
+.info-block {
+    margin-bottom: 25px;
+}
+
+    .info-block.block-info {
+        border: 1px solid #C0C0C0;
+        padding: 0 15px 10px;
+        min-height: 180px;
+        background-color: #FFFFFF;
+    }
+
+        .info-block.block-info .square-box {
+            background-color: #20819e;
+            color: #FFF;
+        }
+
+.stickyButtons {
+    margin: 10px 0 10px 0;
+}
+
+/* Shows the move cursor as the user moves the mouse over the panel header.*/
+#draggablePanelList .panel-heading {
+    cursor: move;
+}
+
+/* Panel */
+.panel-ccm {
+    border-color: #C0C0C0;
+}
+
+    .panel-ccm > .panel-heading {
+        background-color: #EBEBEB;
+        border: 0;
+    }
+
+
+@media(min-width:768px) {
+    body {
+        margin-top: 50px;
+    }
+}
+
+#wrapper {
+    padding-left: 0;
+}
+
+#page-wrapper {
+    width: 100%;
+    padding: 0;
+    background-color: #eee;
+}
+
+.huge {
+    font-size: 50px;
+    line-height: normal;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 225px;
+    }
+
+    #page-wrapper {
+        padding: 10px;
+    }
+}
+
+/* Top Navigation */
+
+.top-nav {
+    padding: 0 15px;
+}
+
+    .top-nav > li {
+        display: inline-block;
+        float: left;
+    }
+
+        .top-nav > li > a {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            line-height: 20px;
+            color: #999;
+        }
+
+            .top-nav > li > a:hover,
+            .top-nav > li > a:focus,
+            .top-nav > .open > a,
+            .top-nav > .open > a:hover,
+            .top-nav > .open > a:focus {
+                color: #fff;
+                background-color: #000;
+            }
+
+    .top-nav > .open > .dropdown-menu {
+        float: left;
+        position: absolute;
+        margin-top: 0;
+        border: 1px solid rgba(0,0,0,.15);
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        background-color: #fff;
+        -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    }
+
+        .top-nav > .open > .dropdown-menu > li > a {
+            white-space: normal;
+        }
+
+ul.message-dropdown {
+    padding: 0;
+    max-height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+li.message-preview {
+    width: 275px;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+}
+
+    li.message-preview > a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+li.message-footer {
+    margin: 5px 0;
+}
+
+ul.alert-dropdown {
+    width: 200px;
+}
+
+/* Error List V2*/
+.forum.table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+.forum .fa {
+    width: 1em;
+    text-align: center;
+}
+
+.forum.table th.cell-stat {
+    width: 10em;
+}
+
+.forum.table th.cell-stat-2x {
+    width: 14em;
+}
+
+/* error List */
+.error-list {
+		list-style: none;
+		font-family: 'Lato', sans-serif;
+		margin: 0px;
+		padding: 0px;
+	}
+	.error-list > li {
+		box-shadow: 0px 0px 5px rgb(51, 51, 51);
+		box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.7);
+		padding: 0px;
+		margin: 0px 0px 20px;
+	}
+	.error-list > li > .device {
+		display: inline-block;
+		width: 100%;
+		padding: 5px;
+		text-align: center;
+		text-transform: uppercase;
+        display:table;
+	}
+	.error-list > li > .device > span {
+		display: none;
+	}
+	.error-list > li .device > .type {
+		display: block;
+		font-size: 14pt;
+		font-weight: 900;
+		line-height: 1;
+        display: table-cell; 
+        vertical-align: middle; 
+	}
+	.error-list > li > img {
+		width: 100%;
+	}
+	.error-list > li > .info {
+		padding-top: 5px;
+		text-align: center;
+	}
+	.error-list > li > .info > .title {
+		font-size: 17pt;
+		font-weight: 700;
+		margin: 0px;
+	}
+	.error-list > li > .info > .desc {
+		font-size: 13pt;
+		font-weight: 300;
+		margin: 0px;
+	}
+	.error-list > li > .info > ul,
+	.error-list > li > .social > ul {
+		display: table;
+		list-style: none;
+		margin: 10px 0px 0px;
+		padding: 0px;
+		width: 100%;
+		text-align: center;
+	}
+	.error-list > li > .social > ul {
+		margin: 0px;
+	}
+	.error-list > li > .info > ul > li,
+	.error-list > li > .social > ul > li {
+		display: table-cell;
+		cursor: pointer;
+		color: rgb(30, 30, 30);
+		font-size: 11pt;
+		font-weight: 300;
+        padding: 3px 0px;
+	}
+    .error-list > li > .info > ul > li > a {
+		display: block;
+		width: 100%;
+		color: rgb(30, 30, 30);
+		text-decoration: none;
+	} 
+    .error-list > li > .social > ul > li {    
+        padding: 0px;
+    }
+    .error-list > li > .social > ul > li > a {
+        padding: 3px 0px;
+	} 
+	.error-list > li > .info > ul > li:hover,
+	.error-list > li > .social > ul > li:hover {
+		color: rgb(30, 30, 30);
+		background-color: rgb(200, 200, 200);
+	}
+	.facebook a,
+	.twitter a,
+	.google-plus a {
+		display: block;
+		width: 100%;
+		color: rgb(75, 110, 168) !important;
+	}
+	.twitter a {
+		color: rgb(79, 213, 248) !important;
+	}
+	.google-plus a {
+		color: rgb(221, 75, 57) !important;
+	}
+	.facebook:hover a {
+		color: rgb(255, 255, 255) !important;
+		background-color: rgb(75, 110, 168) !important;
+	}
+	.twitter:hover a {
+		color: rgb(255, 255, 255) !important;
+		background-color: rgb(79, 213, 248) !important;
+	}
+	.google-plus:hover a {
+		color: rgb(255, 255, 255) !important;
+		background-color: rgb(221, 75, 57) !important;
+	}
+
+	@media (min-width: 768px) {
+		.error-list > li {
+			position: relative;
+			display: block;
+			width: 100%;
+			height: 120px;
+			padding: 0px;
+            background-color:#FFF;
+		}
+		.error-list > li > .device,
+		.error-list > li > img  {
+			display: inline-block;
+		}
+		.error-list > li > .device,
+		.error-list > li > img {
+			width: 120px;
+			float: left;
+		}
+		.error-list > li > .info {
+			overflow: hidden;
+		}
+		.error-list > li > .device,
+		.error-list > li > img {
+			width: 120px;
+			height: 120px;
+			padding: 0px;
+			margin: 0px;
+		}
+		.error-list > li > .info {
+			position: relative;
+			height: 120px;
+			text-align: left;
+			padding-right: 40px;
+		}	
+		.error-list > li > .info > .title, 
+		.error-list > li > .info > .desc {
+			padding: 0px 10px;
+		}
+		.error-list > li > .info > ul {
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+		}
+		.error-list > li > .social {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			display: block;
+			width: 40px;
+		}
+        .error-list > li > .social > ul {
+            border-left: 1px solid rgb(230, 230, 230);
+        }
+		.error-list > li > .social > ul > li {			
+			display: block;
+            padding: 0px;
+		}
+		.error-list > li > .social > ul > li > a {
+			display: block;
+			width: 40px;
+			padding: 10px 0px 9px;
+		}
+	}
+
+/* Side Navigation */
+
+@media(min-width:768px) {
+    .side-nav {
+        position: fixed;
+        top: 71px;
+        left: 225px;
+        width: 225px;
+        margin-left: -225px;
+        border: none;
+        border-radius: 0;
+        overflow-y: auto;
+        background-color: #222;
+    }
+
+        .side-nav > li > a {
+            width: 225px;
+        }
+
+        .side-nav li a:hover,
+        .side-nav li a:focus {
+            outline: none;
+            background-color: #000 !important;
+        }
+}
+
+.side-nav > li > ul {
+    padding: 0;
+}
+
+    .side-nav > li > ul > li > a {
+        display: block;
+        padding: 10px 15px 10px 38px;
+        text-decoration: none;
+        color: #999;
+    }
+
+        .side-nav > li > ul > li > a:hover {
+            color: #fff;
+        }
+
